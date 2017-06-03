@@ -20,11 +20,12 @@ body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
-  color: @grayed;
+  color: @dark;
 }
 
 a {
   text-decoration: none;
+  color: @dark;
 }
 
 #nav {
@@ -34,10 +35,12 @@ a {
   a {
     display: block;
     padding: 4.5em 10px 10px 10px;
+    color: @dark;
 
     &:hover {
-      background-color: #DDD;
+      background-color: @grayed;
     }
+
   }
 
   li {
@@ -64,4 +67,16 @@ a {
 #header {
   width: calc(100% - 4em);
   margin-left: 0;
+  height: 6.6em;
+
+  .title {
+    padding-top: 2em;
+    padding-left: 3.8em;
+    font-size: 1.5em;
+    line-height: 1em;
+
+    a {
+      font-weight: 500;
+    }
+  }
 }
