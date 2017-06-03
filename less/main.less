@@ -1,0 +1,67 @@
+@import "reset.less";
+@import "colors.less";
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: @grayed;
+}
+
+a {
+  text-decoration: none;
+}
+
+#nav {
+  float: right;
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 4.5em 10px 10px 10px;
+
+    &:hover {
+      background-color: #DDD;
+    }
+  }
+
+  li {
+    float: left;
+    -webkit-padding-before: 0;
+
+    &.selected {
+      a {
+        background-color: @dark;
+        color: @bright;
+      }
+    }
+
+    &.ephemeral {
+      &.selected a {
+        background-color: @bright;
+        color: @grayed;
+      }
+    }
+  }
+
+}
+
+#header {
+  width: calc(100% - 4em);
+  margin-left: 0;
+}
