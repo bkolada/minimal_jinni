@@ -1,0 +1,51 @@
+#nav {
+  float: right;
+  list-style: none;
+
+  a {
+    display: block;
+    padding: 4.5em 10px 10px 10px;
+    color: @dark;
+
+    &:hover {
+      background-color: @grayed;
+    }
+
+  }
+
+  li {
+    float: left;
+    -webkit-padding-before: 0;
+
+    &.selected {
+      a {
+        background-color: @dark;
+        color: @bright;
+      }
+    }
+
+    &.ephemeral {
+      &.selected a {
+        background-color: @bright;
+        color: @grayed;
+      }
+    }
+  }
+}
+
+#header {
+  width: calc(100% - 4em);
+  margin-left: 0;
+  height: 6.6em;
+
+  .title {
+    padding-top: 2em;
+    padding-left: 3.8em;
+    font-size: 1.5em;
+    line-height: 1em;
+
+    a {
+      font-weight: 500;
+    }
+  }
+}
