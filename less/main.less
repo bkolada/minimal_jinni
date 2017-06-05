@@ -44,5 +44,73 @@ a {
     margin-left: 8em;
     line-height: 1.5em;
     font-size: 1.25em;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-size: 1.5em;
+      line-height: 1em;
+      margin: 1em 0;
+    }
+
+    h1.title {
+      font-size: 1.75em;
+    }
   }
+}
+
+div.codehilite {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+code, pre {
+  font-family: monospace;
+  background-color: rgb(238, 238, 238);
+}
+
+/*sub and sup stolen from Twitter bootstrap.*/
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+.post pre, .page pre {
+  padding: .5em;
+  font-size: 12px;
+  font-family: Monospace;
+  line-height: 1.1em;
+}
+
+.info {
+  font-family: sans-serif;
+  text-align: right;
+  color: @grayed;
+  font-size: 0.5em;
+  a {
+    display: inline-block;
+    padding: 0 .3em;
+    &.selected {
+      border: 1px #999 solid;
+    }
+    &:hover {
+      background: @lgrayed;
+    }
+  }
+
 }

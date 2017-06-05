@@ -7,10 +7,10 @@
 
     <div class="post{% if article.pinned %} pinned{% endif %}">
         {% if article['title'] -%}
-            <h2 class="title">
+            <h1 class="title">
                 <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
                    title="Permanent Link to &quot;{{ article.title }}&quot;">{{ article.title }}</a>
-            </h2>
+            </h1>
         {% endif %}
 
         {{ article.content }}
@@ -29,11 +29,13 @@
                 {%- endif %}
                 {% if article.tags %}
 
-                    <div class="tags">{% for t in article.tags %}
+                    <div class="tags">
+                                            Tags:
 
+                        {% for t in article.tags %}
                         <a href="{{ SITEURL }}/{{ t.url }}"
                             {%- if tag and tag.name == t.name %}
-                           class="selected"{% endif -%}>{{ t }}</a>
+                           class="selected"{% endif -%}>:{{ t }}:</a>
                     {%- endfor %}
 
                     </div>
