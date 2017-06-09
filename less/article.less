@@ -1,0 +1,70 @@
+
+.article {
+  margin: 1em 20em;
+
+  .date {
+    position: absolute;
+    margin-top: 1em;
+    font-size: 1.2em;
+    color: @grayed;
+  }
+
+  .post {
+    margin-left: 8em;
+    line-height: 1.5em;
+    font-size: 1.25em;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-size: 1.5em;
+      line-height: 1em;
+      margin: 1em 0;
+    }
+
+    h1.title {
+      font-size: 1.75em;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style: outside disc;
+    margin-left: 1.5em;
+  }
+
+  ol {
+    list-style: outside decimal;
+    margin-left: 1.5em;
+  }
+
+  blockquote {
+    margin: 0.7em 0;
+    border-left: @lgrayed solid 0.3em;
+
+    p {
+      padding-left: 1em;
+    }
+
+  }
+
+  table {
+    margin: 1em auto;
+  }
+
+  .highlight, .highlighttable{
+    margin: 1em 0;
+    width: 100%;
+
+    pre {
+      padding: 0.5em 0 0.5em 1em;
+      font-size: 0.8em;
+    }
+  }
+}
