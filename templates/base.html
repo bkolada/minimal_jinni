@@ -19,25 +19,25 @@
     <div id="header">
         <ul id="nav">
             <li {%- if output_file == "index.html" %}
-                class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a>
+                class="selected"{% endif %}><a href="{{ SITEURL }}" class="menu">Home</a>
             </li>
 
             {% if DISPLAY_PAGES_ON_MENU -%}
                 {% for pg in pages %}
                     <li{% if pg == page %} class="selected"{% endif %}><a
-                        href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a>
+                        href="{{ SITEURL }}/{{ pg.url }}" class="menu">{{ pg.title }}</a>
                     </li>
                 {% endfor %}
             {% endif %}
 
             <li {%- if output_file == "archives.html" %}
                 class="selected"{% endif %}>
-                <a href="{{ SITEURL }}/archives.html">Archives</a>
+                <a href="{{ SITEURL }}/archives.html" class="menu">Archives</a>
             </li>
         </ul>
 
         <div class="title">
-            <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+            <h1><a href="{{ SITEURL }}" class="menu">{{ SITENAME }}</a></h1>
             {%- if SITESUBTITLE %}
                 <h2>{{ SITESUBTITLE }}</h2>
             {%- endif %}

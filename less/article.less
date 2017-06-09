@@ -27,6 +27,11 @@
 
     h1.title {
       font-size: 1.75em;
+
+      a {
+        text-decoration: none;
+        color: @dark;
+      }
     }
   }
 
@@ -58,13 +63,71 @@
     margin: 1em auto;
   }
 
-  .highlight, .highlighttable{
+  .highlight, .highlighttable {
     margin: 1em 0;
     width: 100%;
 
     pre {
       padding: 0.5em 0 0.5em 1em;
       font-size: 0.8em;
+    }
+  }
+
+  div.codehilite {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  code, pre {
+    font-family: monospace;
+    background-color: rgb(238, 238, 238);
+  }
+
+  /*sub and sup stolen from Twitter bootstrap.*/
+  sub,
+  sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  .info {
+    font-family: sans-serif;
+    text-align: right;
+    color: @grayed;
+    font-size: 0.7em;
+
+    a {
+      display: inline-block;
+      padding: 0 .3em;
+      color: @dark;
+      text-decoration: none;
+
+      &.selected {
+        border: 1px #999 solid;
+      }
+      &:hover {
+        background: @lgrayed;
+      }
+    }
+
+    .tags {
+      text-align: left;
+    }
+
+    ul {
+      text-align: right;
+      list-style: none;
     }
   }
 }
