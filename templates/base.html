@@ -7,8 +7,8 @@
             }{% endif %}{% endblock %}</title>
     {#    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css"#}
     {#          type="text/css"/>#}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css"
-              type="text/css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css"
+          type="text/css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css"
           type="text/css"/>
 
@@ -19,13 +19,15 @@
     <div id="header">
         <ul id="nav">
             <li {%- if output_file == "index.html" %}
-                class="selected"{% endif %}><a href="{{ SITEURL }}" class="menu">Home</a>
+                class="selected"{% endif %}><a href="{{ SITEURL }}"
+                                               class="menu">Home</a>
             </li>
 
             {% if DISPLAY_PAGES_ON_MENU -%}
                 {% for pg in pages %}
                     <li{% if pg == page %} class="selected"{% endif %}><a
-                        href="{{ SITEURL }}/{{ pg.url }}" class="menu">{{ pg.title }}</a>
+                        href="{{ SITEURL }}/{{ pg.url }}"
+                        class="menu">{{ pg.title }}</a>
                     </li>
                 {% endfor %}
             {% endif %}
@@ -46,7 +48,8 @@
     </div>
 {%- endif %}
 
-
-{% block content %} {% endblock %}
+<div class="content article ">
+    {% block content %} {% endblock %}
+</div>
 </body>
 </html>
